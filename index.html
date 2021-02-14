@@ -1,24 +1,80 @@
-<script>
-  // click button
-  //function to handle the button click
-  function handleButtonClick() {
-    let roll = rollTheDice(20);
-    displayTheResult(roll);
+<style>
+  * {
+    padding: 0;
+    margin: 0;
   }
-  // rolled a dice
-  function rollTheDice(max) {
-    return Math.ceil(Math.random() * max);
+  .container {
+    text-align: center;
+    background-color: rebeccapurple;
+    height: 100%;
   }
-  // function to roll dice
+  .title {
+    font-size: 60px;
+    font-family: sans-serif;
+    padding: 40px;
+    color: hotpink;
+  }
+  .dice {
+    padding: 30px;
+    background-color: rebeccapurple;
+    border: 3px solid hotpink;
+    border-radius: 8px;
+    color: hotpink;
+    font-size: 30px;
+    height: 80px;
+    width: 80px;
+  }
+  .dice-tray {
+    padding: 20px;
+  }
+</style>
 
-  // return a random number 1-20
+<div class="container">
+  <div class="title">Dice Roller 001</div>
+  <div class="dice-tray">
+    <button class="dice" onclick="handleButtonClick(6)">2</button>
+  </div>
+  <div class="dice-tray">
+    <button class="dice" onclick="handleButtonClick(20)">4</button>
+  </div>
+  <div class="dice-tray">
+    <button class="dice" onclick="handleButtonClick(6)">6</button>
+  </div>
+  <div class="dice-tray">
+    <button class="dice" onclick="handleButtonClick(6)">8</button>
+  </div>
+  <div class="dice-tray">
+    <button class="dice" onclick="handleButtonClick(6)">10</button>
+  </div>
+  <div class="dice-tray">
+    <button class="dice" onclick="handleButtonClick(6)">20</button>
+  </div>
+  <div class="dice-tray">
+    <button class="dice" onclick="handleButtonClick(6)">100</button>
+  </div>
 
-  // dislayed results
-  //function to display the results
-  function displayTheResult(result) {
-    // alert the result
-    alert(result);
-  }
-  // ready to go again
-  handleButtonClick();
-</script>
+  <script>
+    // click button
+    //function to handle the button click
+    function handleButtonClick(dice) {
+      let roll = rollTheDice(dice);
+      displayTheResult(roll);
+    }
+    // rolled a dice
+    function rollTheDice(max) {
+      return Math.ceil(Math.random() * max);
+    }
+    // function to roll dice
+
+    // return a random number 1-20
+
+    // dislayed results
+    //function to display the results
+    function displayTheResult(result) {
+      // alert the result
+      alert(result);
+    }
+    // ready to go again
+    //handleButtonClick();
+  </script>
+</div>
